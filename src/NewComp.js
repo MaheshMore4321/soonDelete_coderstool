@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
+import { messageChange } from './Actions';
+
 class NewComp extends Component {
 
     styles = {
@@ -30,7 +32,7 @@ const mapStatetoProps = state => {
 
 const mapDispatchtoProps = dispatch => {
     return {
-        ButtonChange: () => dispatch({type: "MessageChange"})
+        ButtonChange: () => dispatch(messageChange("Thanks you to subscribing"))
     }
 }
 
