@@ -24,11 +24,9 @@ class NewComp extends Component {
     }
 }
 
-const mapStatetoProps = state => {
-    return {
-        message:  state.message
-    }
-}
+const mapStatetoProps = state => ({
+    message: state.messageBox.message
+})
 
 const mapDispatchtoProps = dispatch => {
     return {
@@ -36,4 +34,7 @@ const mapDispatchtoProps = dispatch => {
     }
 }
 
-export default connect(mapStatetoProps, mapDispatchtoProps)(NewComp);
+export default connect(
+    mapStatetoProps,
+    mapDispatchtoProps
+)(NewComp);

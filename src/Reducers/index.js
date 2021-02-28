@@ -1,3 +1,6 @@
 import messageBox from './messageBox';
+import { combineReducers } from 'redux';
 
-export default messageBox;
+export default combineReducers({
+    messageBox
+})
